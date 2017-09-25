@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>prototype</title>
+</head>
+<body>
+	<script>
+// 	function person(){
+//   }
+//   person.prototype={
+// 	sleep:function(){
+// 		alert('休息');
+// 	},
+// }
+// person.prototype.eat=function(){
+// 	alert('吃饭')
+// }
+//   let zhangsan = new person();
+//   let lisi = new person();
+// zhangsan.sleep();
+// lisi.sleep();
+// lisi.eat();
+
+
+// function person(){
+//   this.name='name';
+//   this.age='age';
+// }
+// function student(){
+//   this.classes=1;
+//   this.number=111;
+// }
+// student.prototype = new person();
+// let zhangsan = new person();
+// let lisi= new student();
+// console.log(lisi);
+// console.log(student.constructor);
+
+
+let str ='abcdefghabcd';
+// console.log(str.__proto__);
+
+// let arr=[];
+// alert (arr instanceof Array)
+
+// let includes = str.includes('abcde');
+// alert(includes)
+
+
+// 将一个字符串的某些特定字符替换成别的字符
+// let str1 ='abcdefghabcd';
+// let result=replaceAll(str1,'abc',"#");
+// alert(result);
+// function replaceAll(str,rstr){
+// 	    // let rstr1='';
+// 	    // for(let i=0;i<rstr.length;i++){
+// 	    // 	rstr1+='*';
+// 	    // }
+// 	      let rstr1='#'.repeat(rstr.length)
+//         while(str.includes(rstr)){
+//         	str=str.replace(rstr,rstr1);
+//         }
+//         return str;
+// }
+
+// let str2 = 'a-b-c';
+// let arr = str2.split('-');
+// alert(arr)
+
+
+let url ='http://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.com';
+let result = numUrl(url,'baidu')
+alert(result)
+function numUrl(str,str1){
+	let newarr=[];
+	let rstr1='*'.repeat(str1.length);
+   while(str.includes(str1)){
+    newarr.push(str.indexOf(str1));
+    str=str.replace(str1,rstr1);
+   }
+   return newarr;
+}
+
+let result = position(url,'baidu');
+console.log(result);
+function position(str,str1){
+	let newarr=[];
+	for(let i=0;i<str.length;i++){
+		if(str.substr(i,str1.length)==str1){
+			newarr.push(i);
+		}
+	}
+	return newarr;
+}
+
+
+
+</script>
+</body>
+</html>
